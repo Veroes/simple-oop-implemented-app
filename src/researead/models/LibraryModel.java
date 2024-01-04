@@ -14,16 +14,6 @@ public class LibraryModel {
         return userBooks.get(title);
     }
     
-     public void updateBook(String title, Book updatedBook) {
-        Book isBookFound = userBooks.get(title);
-        if (isBookFound == null) {
-            System.out.println("The book seems not to exist");
-        } else {
-            isBookFound.setStatus(updatedBook.getStatus());
-            isBookFound.setCurrentPage(updatedBook.getCurrentPage());
-        }
-    }
-
     public Map<String, Book> getUserBooks() {
         return new HashMap<>(userBooks);
     }
